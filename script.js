@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 await submitEmail(email);
                 
                 // Show success message
-                showMessage(heroMessage, 'Thanks! You\'ll be notified when we launch.', 'success');
+                showMessage(heroMessage, 'You\'re on the list! 🎉', 'success');
                 emailInput.value = '';
                 
                 // Save to localStorage
@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function showMessage(element, message, type) {
         element.textContent = message;
         element.className = `form-message ${type}`;
+        element.classList.add('show');
         
         // Auto-hide after 5 seconds
         setTimeout(() => {
-            element.textContent = '';
-            element.className = 'form-message';
+            element.classList.remove('show');
         }, 5000);
     }
 
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.feature-card, .hero-main').forEach(el => {
+    document.querySelectorAll('.feature-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add hover effects for interactive elements
     document.querySelectorAll('.form-wrapper button, .feature-card').forEach(el => {
         el.addEventListener('mouseenter', function() {
-            this.style.transform = this.classList.contains('feature-card') ? 'translateY(-4px)' : 'translateY(-2px)';
+            this.style.transform = this.classList.contains('feature-card') ? 'translateY(-4px)' : 'translateY(-1px)';
         });
         
         el.addEventListener('mouseleave', function() {

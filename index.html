@@ -9,18 +9,13 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <div class="character-overlay"></div>
-        </div>
-        
+    <header class="hero" aria-label="Hero">
         <div class="container">
             <div class="hero-content">
-                <!-- Logo -->
-                <div class="logo">SynerMuscle</div>
-                
-                <!-- Main Content -->
-                <div class="hero-main">
+                <!-- Left Column: Content -->
+                <div class="hero-text">
+                    <div class="logo">SynerMuscle</div>
+                    
                     <h1 class="hero-title">Achieve Your Best Body</h1>
                     <p class="hero-subtitle">Your all-in-one fitness companion built for results, powered by science.</p>
                     
@@ -30,12 +25,15 @@
                             <input type="email" placeholder="Enter your email" required>
                             <button type="submit">Get Notified</button>
                         </div>
-                        <div class="form-message" id="heroMessage"></div>
+                        <div class="form-message" id="heroMessage" role="status"></div>
                     </form>
                 </div>
+                
+                <!-- Right Column: Character Background (Desktop) -->
+                <div class="hero-visual"></div>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- Features Section -->
     <section class="features">
