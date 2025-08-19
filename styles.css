@@ -31,7 +31,7 @@ h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     letter-spacing: -0.01em;
-    line-height: 1.05;
+    line-height: 1.1;
 }
 
 h2 {
@@ -53,7 +53,7 @@ p {
 
 /* Logo */
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: #2563EB;
     margin-bottom: 2rem;
@@ -66,7 +66,7 @@ p {
     position: relative;
     display: flex;
     align-items: flex-start;
-    padding: 2rem 0;
+    padding: 56px 0 72px 0;
     background-color: #ffffff;
 }
 
@@ -87,41 +87,71 @@ p {
 
 .hero-title {
     color: #000000;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     letter-spacing: -0.01em;
-    line-height: 1.05;
+    line-height: 1.1;
 }
 
-.hero-subtitle {
-    color: #475569;
-    font-weight: 400;
+.hero-body {
     margin-bottom: 2.5rem;
+}
+
+.hero-body p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.hero-features {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.hero-features li {
+    margin-bottom: 1.5rem;
+    color: #475569;
     font-size: 1.125rem;
     line-height: 1.6;
+    padding-left: 0;
+}
+
+.hero-features li strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.cta-section {
+    margin: 2rem 0;
+}
+
+.cta-section p {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.cta-section strong {
+    color: #1a1a1a;
+    font-weight: 600;
 }
 
 /* Email Form */
 .email-form {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     width: 100%;
 }
 
 .form-wrapper {
     display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-    max-width: 400px;
-    margin: 0;
-    padding: 1.25rem;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
 }
 
 .form-wrapper input[type="email"] {
-    flex: 1;
     height: 56px;
     padding: 16px;
     border: 1px solid #E5E7EB;
@@ -131,6 +161,7 @@ p {
     color: #1f2937;
     outline: none;
     transition: all 0.2s ease;
+    width: 100%;
 }
 
 .form-wrapper input[type="email"]:focus {
@@ -149,7 +180,7 @@ p {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
-    white-space: nowrap;
+    width: 100%;
 }
 
 .form-wrapper button:hover {
@@ -197,7 +228,7 @@ p {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    margin: 0 auto;
+    margin: 2rem auto 0 auto;
 }
 
 /* Features Section */
@@ -294,15 +325,36 @@ p {
     }
     
     .hero {
-        padding: 3rem 0;
+        padding: 64px 0;
     }
     
     .hero-title {
         font-size: 3rem;
     }
     
-    .hero-subtitle {
+    .hero-body p {
         font-size: 1.25rem;
+    }
+    
+    .hero-features li {
+        font-size: 1.25rem;
+    }
+    
+    .cta-section p {
+        font-size: 1.25rem;
+    }
+    
+    .form-wrapper {
+        flex-direction: row;
+        max-width: 500px;
+    }
+    
+    .form-wrapper input[type="email"] {
+        flex: 1;
+    }
+    
+    .form-wrapper button {
+        width: auto;
     }
     
     .hero-visual {
@@ -329,10 +381,12 @@ p {
 @media (min-width: 1024px) {
     .container {
         padding: 0 64px;
+        max-width: 1200px;
     }
     
     .hero {
-        padding: 4rem 0;
+        padding: 80px 0;
+        background-color: #ffffff;
     }
     
     .hero-content {
@@ -340,29 +394,44 @@ p {
         align-items: center;
         text-align: left;
         gap: 4rem;
+        position: relative;
     }
     
     .hero-text {
         max-width: 640px;
         margin-bottom: 0;
         flex-shrink: 0;
+        z-index: 2;
     }
     
     .hero-title {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-bottom: 2rem;
         letter-spacing: -0.01em;
-        line-height: 1.05;
+        line-height: 1.1;
     }
     
-    .hero-subtitle {
-        font-size: 1.25rem;
-        margin-bottom: 3rem;
+    .hero-body {
+        margin-bottom: 2.5rem;
+    }
+    
+    .hero-body p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+    
+    .hero-features li {
+        font-size: 1.125rem;
+        line-height: 1.6;
+    }
+    
+    .cta-section p {
+        font-size: 1.125rem;
         line-height: 1.6;
     }
     
     .form-wrapper {
-        max-width: 450px;
+        max-width: 500px;
         margin: 0;
     }
     
@@ -389,7 +458,7 @@ p {
     }
     
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     
     h2 {
@@ -399,8 +468,16 @@ p {
 
 /* Large Desktop */
 @media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+    
     .hero-title {
-        font-size: 4.5rem;
+        font-size: 4rem;
+    }
+    
+    .hero-text {
+        max-width: 720px;
     }
     
     .hero-visual {
