@@ -68,6 +68,21 @@ p {
     align-items: flex-start;
     padding: 56px 0 72px 0;
     background-color: #ffffff;
+    background-image: url('images/synermuscle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: 1;
 }
 
 .hero-content {
@@ -102,40 +117,6 @@ p {
     color: #475569;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-}
-
-.hero-features {
-    list-style: none;
-    margin: 2rem 0;
-}
-
-.hero-features li {
-    margin-bottom: 1.5rem;
-    color: #475569;
-    font-size: 1.125rem;
-    line-height: 1.6;
-    padding-left: 0;
-}
-
-.hero-features li strong {
-    color: #1a1a1a;
-    font-weight: 600;
-}
-
-.cta-section {
-    margin: 2rem 0;
-}
-
-.cta-section p {
-    font-size: 1.125rem;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-.cta-section strong {
-    color: #1a1a1a;
-    font-weight: 600;
 }
 
 /* Email Form */
@@ -217,18 +198,6 @@ p {
     background: #fee2e2;
     color: #991b1b;
     border: 1px solid #fca5a5;
-}
-
-/* Hero Visual - Mobile */
-.hero-visual {
-    width: 100%;
-    max-width: 420px;
-    height: 300px;
-    background-image: url('images/synermuscle.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: 2rem auto 0 auto;
 }
 
 /* Features Section */
@@ -336,14 +305,6 @@ p {
         font-size: 1.25rem;
     }
     
-    .hero-features li {
-        font-size: 1.25rem;
-    }
-    
-    .cta-section p {
-        font-size: 1.25rem;
-    }
-    
     .form-wrapper {
         flex-direction: row;
         max-width: 500px;
@@ -355,11 +316,6 @@ p {
     
     .form-wrapper button {
         width: auto;
-    }
-    
-    .hero-visual {
-        max-width: 480px;
-        height: 350px;
     }
     
     .features-grid {
@@ -387,6 +343,12 @@ p {
     .hero {
         padding: 80px 0;
         background-color: #ffffff;
+        background-position: right center;
+        background-size: contain;
+    }
+    
+    .hero::before {
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.3) 100%);
     }
     
     .hero-content {
@@ -420,33 +382,9 @@ p {
         line-height: 1.6;
     }
     
-    .hero-features li {
-        font-size: 1.125rem;
-        line-height: 1.6;
-    }
-    
-    .cta-section p {
-        font-size: 1.125rem;
-        line-height: 1.6;
-    }
-    
     .form-wrapper {
         max-width: 500px;
         margin: 0;
-    }
-    
-    .hero-visual {
-        flex: 1;
-        height: 100vh;
-        max-width: none;
-        background-position: right center;
-        background-size: contain;
-        margin: 0;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        z-index: 1;
     }
     
     .features {
@@ -478,10 +416,6 @@ p {
     
     .hero-text {
         max-width: 720px;
-    }
-    
-    .hero-visual {
-        width: 45%;
     }
 }
 
